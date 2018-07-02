@@ -1,0 +1,86 @@
+<!DOCTYPE>
+
+<html>
+	<head>
+		<link href="http://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<!-- HTML5 Audio tags - weakly supported, works in Chrome(tested) -->
+
+<p id="video">
+<iframe width="600" height="300" src="https://www.youtube.com/embed/Za-CtO0sZk0" frameborder="1" allowfullscreen></iframe>
+</p>		<!-- Before the game begins problem method selection -->
+<p id="pre-start">
+
+  <span>Choose Method</span>
+  <select id ="methods">
+  <option value="      ">Millionaire</option>
+  <option value="boolean"  >True/False</option>
+  <option value="multiple">Multiple Choice</option>
+</select>
+
+<!-- Before the game begins problem method selection -->
+
+</p>
+<audio id="background" src='sound/background.mp3'></audio>
+		<!-- Shown when the player wins/loses -->
+		<div id="game-over"></div>
+		<div id="bigPrize"></div>
+        <button id="reStart">PLAY AGAIN
+		</button>
+		<!-- user lose the game, win the game, and restart the  game-->
+
+		<!-- The actual game markup -->
+		<div id="game">
+			<div id="top">
+
+				<img src="img/logo.jpg" id="logo" />
+				<ul id="levels">
+					<li id ="amount15">$1,000,000</li>
+					<li id ="amount14">$500,000</li>
+					<li id ="amount13">$250,000</li>
+					<li id ="amount12">$125,000</li>
+					<li id ="amount11">$64,000</li>
+					<li id ="amount10">$32,000</li>
+					<li id ="amount9">$16,000</li>
+					<li id ="amount8">$8,000</li>
+					<li id ="amount7">$4,000</li>
+					<li id ="amount6">$2,000</li>
+					<li id ="amount5">$1,000</li>
+					<li id ="amount4">$500</li>
+					<li id ="amount3">$250</li>
+					<li id ="amount2">$200</li>
+					<li id ="amount1">$100</li>
+				</ul>
+                 <div id="myBar"></div>
+				<div class="clear"></div>
+			</div>
+
+			<div id="options">
+				<div id="fifty" class="options-button"><img src="img/50-50.png"/> </div>
+			    <div id="music" class="options-button"><img id="musicBC" src="img/musicBC.jpg"/> </div>
+				<div id="clock" class="options-button"></div>
+				<div id="money">$</div>
+			</div>
+			<div id="question-box"><!--answer block-->
+				<span class="big-text"></span>
+				<span class="content" ></span>
+			</div><!-- answer block-->
+			<div id="answer-box">
+				<div id="answer0" class="answer">
+				</div>
+				<div id="answer1" class="answer">
+				</div>
+				<div id="answer2" class="answer">
+				</div>
+				<div id="answer3" class="answer">
+				</div>
+			</div>
+		</div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		<!-- Script inclusion: JQuery for effects, Knockout for MVVM, millionaire.js for application -->
+        <script type="text/javascript" src="millionaire.js"></script>
+
+	</body>
+</html>
